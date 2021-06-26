@@ -2,6 +2,7 @@ import React, {useEffect,useState} from 'react';
 
 import { MovieRow } from './components/MovieRow';
 import { FeatureMovie } from './components/FeatureMovie';
+import { Header } from './components/Header';
 
 import './App.css'
 
@@ -11,6 +12,7 @@ function App() {
 
   const[movieList, setMovieList] = useState([])
   const [featureData, setFeaturedData] = useState()
+  const [blackHeader, setBlackHeader] = useState(false)
 
   useEffect(() => {
     const loadAll = async () => {  //Pegando a lista total
@@ -28,8 +30,25 @@ function App() {
     loadAll();
   }, [])
 
+  useEffect(() => {
+    const scrollListener = () => {
+      if(window.scrollY > 10) {
+        setBlackHeader(true)
+      } else {
+        setBlackHeader(false)
+      }
+    }
+    window.addEventListener('scroll', scrollListener)
+
+    return () => {
+      window.removeEventListener('scroll', scrollListener)
+    }
+  },[])
+
   return (
     <div className="page">
+
+      <Header black={blackHeader} />
       
       {featureData &&
         <FeatureMovie item={featureData} />
@@ -45,6 +64,10 @@ function App() {
           ))}
             
         </section>
+
+        <footer>
+          
+        </footer>
     </div>
   );
 }

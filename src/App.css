@@ -9,3 +9,7 @@ body {
   color: #FFFFFF;
   font-family: 'Roboto', sans-serif;
 }
+
+.lists {
+  margin-top: -6rem;
+}

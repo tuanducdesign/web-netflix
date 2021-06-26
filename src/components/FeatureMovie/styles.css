@@ -8,8 +8,84 @@
     background: linear-gradient(to top, #111 10%, transparent 90%)
 }
 
-.featured--vertical {
+.featured--horinzontal {
     width: inherit;
     height: inherit;
-    background: linear-gradient(to right, #111 30%, transparent 70%)
+    background: linear-gradient(to right, #111 30%, transparent 70%);
+    
+    padding-left: 3rem;
+    padding-bottom: 6rem;
+    padding-top: 70px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
 }
+
+.featured--name {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.feature--info {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    
+}
+
+.featured--points {
+    color: #46D369 ;
+}
+
+.feature--description {
+    margin-top: 1rem;
+    
+    font-size: 1.2rem;
+    color: #FFF;
+    max-width: 40%;
+}
+
+.feature--buttons {
+    margin-top: 2rem;
+}
+
+.feature--watchbutton,
+.feature--mylistbutton {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.8rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 0.8rem;
+
+    transition: filter 0.2s;
+}
+
+.feature--watchbutton:hover,
+.feature--mylistbutton:hover {
+    filter: brightness(0.9);
+}
+
+.feature--watchbutton {
+    background: #FFFFFF;
+    color: #000;
+}
+
+.feature--mylistbutton {
+    background: #333;
+    color: #FFFFFF;
+}
+
+.feature--genres {
+    margin-top: 1.4rem;
+    font-size: 1rem;
+    color: #999;
+}
+
+
