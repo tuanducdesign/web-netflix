@@ -53,22 +53,28 @@
 
 .feature--buttons {
     margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    
 }
 
 .feature--watchbutton,
-.feature--mylistbutton {
+.feature--myinfobutton {
     font-size: 1.2rem;
     font-weight: bold;
-    padding: 0.8rem 1rem;
+    
+    padding: 0.5rem 2.4rem 0.5rem 2rem;
+
+    margin-right: 1rem;
+
     border-radius: 5px;
     text-decoration: none;
-    margin-right: 0.8rem;
 
     transition: filter 0.2s;
 }
 
 .feature--watchbutton:hover,
-.feature--mylistbutton:hover {
+.feature--myinfobutton:hover {
     filter: brightness(0.9);
 }
 
@@ -77,9 +83,13 @@
     color: #000;
 }
 
-.feature--mylistbutton {
-    background: #333;
+.feature--myinfobutton {
+    background-color: rgba(109,109,110,0.7);
     color: #FFFFFF;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .feature--genres {

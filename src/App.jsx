@@ -61,13 +61,21 @@ function App() {
               title={item.title} 
               items={item.items} 
             />
-          ))}
-            
+          ))}        
         </section>
 
         <footer>
-          
+        Feito para estudo de react, todos os direitos das imagens são da Netflix.<br/>
+        Dados Extraidos de https://www.themoviedb.org/ <br/>
+              & Carlos Eduardo Silva 
         </footer>
+        
+        {movieList.length <= 0 &&
+      <div className="loading">
+        <img src="https://cdn.lowgif.com/small/0534e2a412eeb281-the-counterintuitive-tech-behind-netflix-s-worldwide.gif" alt="loading"></img>
+      </div>
+    }
+
     </div>
   );
 }

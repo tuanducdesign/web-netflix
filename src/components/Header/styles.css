@@ -5,7 +5,7 @@ header {
     left: 0;
     right: 0;
 
-    padding: 0 30px;
+    padding: 0 40px;
 
     height: 70px;
 
@@ -22,7 +22,34 @@ header.black {
 }
 
 .header--logo {
-    height: 25px;
+    height: 65px;
+
+    cursor: pointer;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header--logo ul {
+    font-size: 0.9rem;
+    
+    list-style: none;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.header--logo ul li {
+    margin-left: 22px;
+    transition: filter 0.3s;
+}
+
+.header--logo ul li:hover {
+    filter: brightness(0.7);
 }
 
 .header--logo img {
@@ -30,10 +57,21 @@ header.black {
 }
 
 .header--user {
-    height: 35px
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header--user p {
+    margin-right: 25px;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
 .header--user img {
     height: 100%;
     border-radius: 4px;
+    cursor: pointer;
 }

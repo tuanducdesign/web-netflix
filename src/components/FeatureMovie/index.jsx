@@ -2,6 +2,8 @@ import React from 'react'
 
 import '../FeatureMovie/styles.css'
 
+import ErrorOutlineIcon from '@material-ui/icons/ErrorOutline';
+
 export function FeatureMovie({item}) {
 
     let firtDate = new Date(item.first_air_date);
@@ -33,10 +35,13 @@ export function FeatureMovie({item}) {
 
                     <div className="feature--buttons">
                         <a href={`/watch/${item.id}`} className="feature--watchbutton"> ► Assistir</a>
-                        <a href={`/list/${item.id}`} className="feature--mylistbutton"> +Minha list</a>
+                        <a href={`/list/${item.id}`} className="feature--myinfobutton">
+                            <ErrorOutlineIcon style={{marginRight: '10'}} />
+                            <span>Mais informações</span> 
+                        </a>
                     </div>
 
-                    <div className="feature--genres"><strong>Gêneros:</strong>{genres.join(', ')}</div>
+                    <div className="feature--genres"><strong>Gêneros:</strong> {genres.join(', ')}</div>
                 </div>
            </div>
        </section>
